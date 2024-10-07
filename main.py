@@ -1,5 +1,4 @@
 # Library Importations
-
 import math
 
 ## Iniatilization of the Variables
