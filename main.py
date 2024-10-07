@@ -40,6 +40,7 @@ min = standard_deviation - 2 * standard_uncertainty
 max = standard_deviation + 2 * standard_uncertainty
 
 ## Print Out Results
-print(f"\nStandard Deviation: {round(standard_deviation, 10)}")
+print(f"\nMean: {round(mean, 10)}")
+print(f"Standard Deviation: {round(standard_deviation, 10)}")
 print(f"Standard Uncertainty: {round(standard_uncertainty, 10)}")
-print(f"Confidence Interval:\nMin: {min}\nMax: {max}")
+print(f"Confidence Interval:\nLower Internal: {min}\nHigher Interval: {max}")
