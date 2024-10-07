@@ -14,7 +14,6 @@ low = 0;
 high = 0;
 
 # Taking the Data
-
 with open("dataList.txt") as file:
     data_list = file.read().split(",")
     n = len(data_list)
@@ -35,7 +34,6 @@ mean = mean / n
 ## Finding the Standard Deviation
 
 # Summation of the differences between data point and mean
-
 for data in data_list:
     sum_of_differences += ((data - mean) ** 2)
 
@@ -51,7 +49,6 @@ low = mean - (2 * standard_uncertainty)
 high = mean + (2 * standard_uncertainty)
 
 ## Print Out Results
-
 print("\nData Points: ", end = "")
 print(*data_list, sep = ", ")
 print(f"Mean: {round(mean, 10)}")
