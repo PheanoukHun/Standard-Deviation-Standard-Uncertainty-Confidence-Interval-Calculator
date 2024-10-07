@@ -1,10 +1,17 @@
+# Library Importations
+
 import math
+
+## Iniatilization of the Variables
 
 data_list = None;
 standard_deviation = 0;
 standard_uncertainty = 0;
+sum_of_differences = 0;
 n = None;
 mean = 0;
+low = 0;
+high = 0;
 
 # Taking the Data
 
@@ -28,7 +35,7 @@ mean = mean / n
 ## Finding the Standard Deviation
 
 # Summation of the differences between data point and mean
-sum_of_differences = 0
+
 for data in data_list:
     sum_of_differences += ((data - mean) ** 2)
 
@@ -40,12 +47,13 @@ standard_deviation = math.sqrt(temp)
 standard_uncertainty = standard_deviation / math.sqrt(n)
 
 ## Minimum and Maximum Confidence Interval
-low = standard_deviation - (2 * standard_uncertainty)
-high = standard_deviation + (2 * standard_uncertainty)
+low = mean - (2 * standard_uncertainty)
+high = mean + (2 * standard_uncertainty)
 
 ## Print Out Results
 
-print(f"\nData Points: {data_list}")
+print("\nData Points: ", end = "")
+print(*data_list, sep = ", ")
 print(f"Mean: {round(mean, 10)}")
 print(f"Standard Deviation: {round(standard_deviation, 10)}")
 print(f"Standard Uncertainty: {round(standard_uncertainty, 10)}")
