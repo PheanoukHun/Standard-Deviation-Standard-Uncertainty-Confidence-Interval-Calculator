@@ -1,4 +1,5 @@
 # Library Importations
+
 import sys
 import json
 
@@ -32,6 +33,7 @@ for x in dataKeys:
 results = StatisticsCalc(data_list)
 
 ## Print Out Results
+
 print("\nData Points: ");
 for point in point_list:
     print(f"  {point[0]} : {point[1]}")
